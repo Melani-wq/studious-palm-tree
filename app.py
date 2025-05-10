@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = "tu_clave_secreta"  # Requerido para usar flash messages
 
 # Tarifas por hora (modificables desde la interfaz)
-rate_per_hour = {"Lunes-Viernes": 1250, "Sábado": 1500}
+rate_per_hour = {"Lunes-Viernes": 1500, "Sábado": 1500}
 
 # Días de la semana que se considerarán
 days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
@@ -89,7 +89,7 @@ def resumen_empleado(employee):
 
 @app.route("/update_rate", methods=["POST"])
 def update_rate():
-    rate_per_hour["Lunes-Viernes"] = int(request.form.get("rate_week", 1250))
+    rate_per_hour["Lunes-Viernes"] = int(request.form.get("rate_week", 1500))
     rate_per_hour["Sábado"] = int(request.form.get("rate_saturday", 1500))
     flash("Tarifas actualizadas correctamente.", "success")
     return redirect(url_for("index"))
