@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = "tu_clave_secreta"  # Requerido para usar flash messages
 
 # Tarifas por hora (modificables desde la interfaz)
-rate_per_hour = {"Lunes-Viernes": 1500, "Sábado": 1500}
+rate_per_hour = {"Lunes-Viernes": 1600, "Sábado": 1600}
 
 # Días de la semana que se considerarán
 days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
